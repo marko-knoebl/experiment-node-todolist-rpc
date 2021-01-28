@@ -23,6 +23,9 @@ const main = async () => {
   // set up web server
   const app = express();
   app.use(cors());
+  app.get("/", (req, res) => {
+    res.send("<h1>welcome to the API</h1>");
+  });
   app.use(express.json());
   const todosController = createTodosController(todos);
   app.use(jaysonPromise.server(todosController).middleware());
