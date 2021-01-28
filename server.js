@@ -24,7 +24,7 @@ const main = async () => {
   const app = express();
   app.use(cors());
   app.get("/", (req, res) => {
-    res.send("<h1>welcome to the API</h1>");
+    res.send("<h1>Welcome to the API</h1>");
   });
   app.use(express.json());
   const todosController = createTodosController(todos);
